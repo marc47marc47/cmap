@@ -5,6 +5,9 @@
 在Go 1.9之前，go语言标准库中并没有实现并发`map`。在Go 1.9中，引入了`sync.Map`。新的`sync.Map`与此`cmap`有几个关键区别。标准库中的`sync.Map`是专为`append-only`场景设计的。因此，如果您想将`Map`用于一个类似内存数据库，那么使用我们的版本可能会受益。你可以在golang repo上读到更多，[这里](https://github.com/golang/go/issues/21035) and [这里](https://stackoverflow.com/questions/11063473/map-with-concurrent-access)
 ***译注:`sync.Map`在读多写少性能比较好，否则并发性能很差***
 
+for [pkg go doc](https://pkg.go.dev/github.com/marc47marc47/cmap)
+The [original source code](https://github.com/orcaman/concurrent-map)
+
 ## 用法
 
 导入包:
